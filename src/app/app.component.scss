@@ -1,0 +1,163 @@
+// header
+.header {
+    box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+    background-color: #e8d5c2;
+    position: fixed;
+    z-index: 2;
+    color: #252016;
+    height: 36px;
+}
+
+//add auto space inbetween
+.flex-auto-spacer {
+    flex: 1 1 auto;
+}
+.header-btn {
+    flex: .01 .01 auto;
+}
+// ./header
+
+// cover
+.cover {
+    background-image: url(/assets/images/banner/banner3.jpg);
+    padding-top: 65px;
+    color: whitesmoke;
+}
+.search-form {
+  min-width: 150px;
+  max-width: 500px;
+  color: white !important;
+}
+.search-field {
+  width: 300px;
+}
+// ./cover
+
+// tiles
+.category-tiles{
+    margin: 20px;
+}
+.review-tiles{
+    margin: 8px;
+}
+// ./tiles
+
+// review
+.review {
+    margin: 30px;
+}
+mat-grid-list h3 {
+    text-align: center;
+}
+// ./review
+
+// add icon
+.add-icon{
+    font-size: 50px !important;
+    position: fixed;
+    bottom: 40px;
+    right: 38px;
+    cursor: pointer;
+}
+// ./add icon
+
+// footer
+.footer {
+    height: 20px;
+    background-color: #e8d5c2;
+}
+// ./footer
+
+// menu-bar when scroll to top
+.menu-bar{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    text-align: right;
+    color: black;
+}
+
+//container to align elements center of the page
+.container{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+//review title heading
+.review-title{
+    margin-left: 11px;
+    margin-bottom: 5px;
+    display: flex;
+}
+
+//------------start Search field
+// Change text colour when inputting text
+.toolbar-search, mat-placeholder {
+  color: #e8d5c2;
+  font-size: 12px;
+}
+:host /deep/ .mat-form-field-ripple{
+    background-color: #e8d5c2;
+}
+
+// Changes the underline and placeholder colour before input is selected
+:host /deep/ .mat-input-underline {
+    background-color: #e8d5c2;
+}
+
+.cat-tile{
+    background-color: lightgray;
+}
+
+.top-pick-block{
+    display: block !important;
+}
+
+.tile-heading{
+    font-size: 255%;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+//Tile background images
+.mobile{
+    background-image: url(/assets/images/mobile/mobile1.jpg);
+    width: 100%;
+}
+.laptop{
+    background-image: url(/assets/images/laptop/laptop2.jpg);
+}
+.tablet{
+    background-image: url(/assets/images/tablet/tablet1.jpg);
+}
+.desktop{
+    background-image: url(/assets/images/desktop/desktop1.jpg);
+}
+.camera{
+    background-image: url(/assets/images/camera/camera3.jpg);
+}
+.headphone{
+    background-image: url(/assets/images/headphones/headphone1.jpg);
+}
+.speaker{
+    background-image: url(/assets/images/speakers/speaker1.jpg);
+}
+.smartWatch{
+    background-image: url(/assets/images/smartwatch/watch1.jpg);
+}
+.vr{
+    background-image: url(/assets/images/vr/vr.jpg);
+}
+//------------ end Search field
+
+//---- rating
+:host /deep/.star-icon:before{
+  color:#9e6933 !important;
+}
+:host /deep/ .star-icon{
+  color:#9e69337a !important;
+}
+//-- end rating
+.buttonColor{
+  font-weight: bold;
+}

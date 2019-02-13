@@ -1,0 +1,98 @@
+.login-baackground {
+     background: url(assets/images/banner/banner5.jpg)  no-repeat fixed center; 
+     background-size: 100% 100%;
+     position: fixed;
+     height: 100%;
+     width: 100%;
+}
+.login-card {
+    background-color: black;
+    opacity: 0.6    ;
+    color: #e8d5c2;
+    text-align: center;
+    width: 35%;
+}
+.login-header {
+    text-align: center;
+    font-size: 20px;
+}
+.login-form {
+    display: flex;
+    flex-direction: column;
+    color: #e8d5c2;
+}
+.login-field {
+    width: 100%;
+}
+.login-footer {
+    text-align: center;
+}
+.mat-form-field-label{
+    color: #e8d5c2;
+    // font-size: 20px;
+}
+// Changes the underline colour before input is selected
+/deep/ .mat-form-field-underline {
+    background-color: #e8d5c2;
+}
+
+.login-btn {
+    width: 100%;
+    background-color: #e8d5c2;
+    color: black;
+    font-weight: 700;
+}
+.reg-btn {
+    color: yellowgreen;
+}
+
+// Media query
+
+@media screen and (max-width: 1200px) {
+  .login-baackground {
+     background: url(assets/images/banner/banner5.jpg)  no-repeat fixed center; 
+     background-size: 100% 100%; 
+     position: fixed;
+     height: 100%;
+     width: 100%;
+}
+.login-card {
+    width: 40%;
+}
+}
+@media screen and (max-width: 900px) {
+  .login-baackground {
+     background: url(assets/images/banner/banner8.jpg)  no-repeat fixed center; 
+     background-size: 100% 100%; 
+     position: fixed;
+     height: 100%;
+     width: 100%;  
+}
+.login-card {
+    width: 45%;
+}
+}
+@media screen and (max-width: 600px) {
+  .login-baackground {
+     background: url(assets/images/banner/banner6.jpg)  no-repeat fixed center;  
+     background-size: 100% 100%; 
+     position: fixed;
+     height: 100%;
+     width: 100%; 
+}
+.login-card {
+    width: 50%;
+}
+}
+@media screen and (max-width: 400px) {
+  .login-baackground {
+     background: url(assets/images/banner/banner6.jpg)  no-repeat fixed center;  
+     background-size: 100% 100%; 
+     position: fixed;
+     height: 100%;
+     width: 100%; 
+}
+.login-card {
+    width: 70%;
+}
+}

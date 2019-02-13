@@ -1,0 +1,109 @@
+<!--Header-->
+<mat-toolbar class="header" *ngIf="isNavbarVisible">
+  <mat-toolbar-row>
+    <h2 style="font-family: Times New Roman">TechABreak</h2>
+    <span class="flex-auto-spacer"></span>
+    <button mat-button class="buttonColor" (click)="login()">Login</button>
+    <span class="header-btn"></span>
+    <button mat-button class="buttonColor" (click)="register()">Register</button>
+  </mat-toolbar-row>
+</mat-toolbar>
+<!--End of Header-->
+
+<!--Cover Section-->
+<mat-grid-list cols="1" rowHeight="12:1" class="cover" *ngIf="home">
+  <div class="menu-bar">
+    <button mat-button class="buttonColor" (click)="login()">Login</button>
+    <button mat-button class="buttonColor" (click)="register()">Register</button>
+  </div>
+  <mat-grid-tile>
+      <h1>{{title}}</h1>
+  </mat-grid-tile>
+  <mat-grid-tile class="gridColor">
+    <form class="search-form">
+      <mat-form-field class="search-field">
+        <input matInput value="">
+        <mat-placeholder>Search</mat-placeholder>
+        <!--<mat-icon>search</mat-icon>-->
+      </mat-form-field>
+    </form>
+  </mat-grid-tile>
+</mat-grid-list>
+<!--End of Cover Section-->
+
+<!--Tile Section-->
+<mat-grid-list cols="4" gutterSize="20px" rowHeight="2:1" class="category-tiles" *ngIf="home">
+    <!-- <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">
+      {{tile.title}}
+    </mat-grid-tile> -->
+    <mat-grid-tile colspan="1" rowspan="1" class="cat-tile mobile">
+      <span class="tile-heading">Mobile</span>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="1" rowspan="1" class="cat-tile laptop">
+      <span class="tile-heading">Laptop</span>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="1" rowspan="1" class="cat-tile tablet">
+      <span class="tile-heading">Tablet</span>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="1" rowspan="3" class="cat-tile">
+      <h3>Top pick of the month</h3>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="1" rowspan="1" class="cat-tile desktop">
+        <span class="tile-heading">Desktop</span>
+      </mat-grid-tile>
+    <mat-grid-tile colspan="1" rowspan="1" class="cat-tile camera">
+        <span class="tile-heading">Camera</span>
+      </mat-grid-tile>
+    <mat-grid-tile colspan="1" rowspan="1" class="cat-tile headphone">
+        <span class="tile-heading">Headphone</span>
+      </mat-grid-tile>
+    <mat-grid-tile colspan="1" rowspan="1" class="cat-tile speaker">
+        <span class="tile-heading">Speaker</span>
+      </mat-grid-tile>
+    <mat-grid-tile colspan="1" rowspan="1" class="cat-tile smartWatch">
+        <span class="tile-heading">Smart Watch</span>
+      </mat-grid-tile>
+    <mat-grid-tile colspan="1" rowspan="1" class="cat-tile vr">
+        <span class="tile-heading">VR</span>
+      </mat-grid-tile>
+  </mat-grid-list>
+<!--End of Tile Section-->
+
+<!--Recent Review Section-->
+<div class="container" *ngIf="home">
+  <mat-grid-list cols="1" class="review-tiles">
+    <h3>Recent Reviews</h3>
+    <mat-card *ngFor="let review of reviews" class="review">
+      <mat-grid-list cols="4" rowHeight="2:1" class="tile">
+        <div class="review-title">
+          <h4>{{review.heading}}</h4>
+          <span class="flex-auto-spacer"></span>
+          <rating [(ngModel)]="review.rating" [readonly]="true">
+  </rating>
+        </div>
+        <mat-grid-tile colspan="1">
+          <img [src]="review.imageUrl" width="50%;">
+        </mat-grid-tile>
+        <mat-grid-tile colspan="3">
+          <p>{{review.text}}</p>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </mat-card>
+  </mat-grid-list>
+</div>
+<!--End of Recent Review Section-->
+
+<!-- Add new review button -->
+<mat-icon class="add-icon" *ngIf="home" (click)="addreview()">add_circle</mat-icon>
+<!--End of Add new review button -->
+
+<!--Footer-->
+<footer class="footer" *ngIf="home">
+  copyright @ vortexcg
+  <span style="float: right;">Social Icons</span>
+</footer>
+<!--End of Footer-->
+
+<!--<app-login [parentData] = "name"></app-login>-->
+<router-outlet></router-outlet>
+

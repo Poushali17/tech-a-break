@@ -1,0 +1,65 @@
+<mat-grid-list cols="1" rowHeight="100%" class="login-baackground">
+  <!--Login Form-->
+  <mat-grid-tile>
+    <mat-card class="login-card" flex="50" *ngIf="isFormVisible">
+      <mat-card-content class="login-header">
+        Login To Your Account
+      </mat-card-content>
+      <br><br>
+      <mat-card-content>
+        <div class="login-form">
+          <mat-form-field>
+            <input matInput placeholder="Username">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'">
+            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+          </mat-form-field>
+          <br>
+          <button mat-raised-button class="login-btn">Login</button>
+        </div>
+      </mat-card-content>
+      <br><br>
+      <mat-card-content class="login-footer">
+        Don't Have An Account? <button mat-button class="reg-btn" (click)="register()">Register</button>
+      </mat-card-content>
+    </mat-card>
+    <!--End of Login Form-->
+    <!--Registration Form-->
+    <mat-card class="login-card" flex="50" *ngIf="!isFormVisible">
+      <mat-card-content class="login-header">
+        Sign Up
+      </mat-card-content>
+      <br><br>
+      <mat-card-content>
+        <div class="login-form">
+          <mat-form-field>
+            <input matInput placeholder="Fullname">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Username">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="New Password" [type]="hide ? 'password' : 'text'">
+            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Confirm Password" type="password">
+            <!--<mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>-->
+          </mat-form-field>
+          <br>
+          <button mat-raised-button class="login-btn">Sign Up</button>
+        </div>
+      </mat-card-content>
+      <br><br>
+      <mat-card-content class="login-footer">
+        <!--Don't Have An Account? <button mat-button class="reg-btn" (click)="register()">Register</button>-->
+      </mat-card-content>
+    </mat-card>
+    <!--End of Registration Form-->
+  </mat-grid-tile>
+</mat-grid-list>
+
+<!--<div class="login-baackground">
+  
+</div>-->
