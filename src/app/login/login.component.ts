@@ -22,4 +22,9 @@ export class LoginComponent implements OnInit {
   }
   ngOnInit() {
   }
+
+  // method to navigate to register page
+  register() {
+    this.router.navigateByUrl('/register');
+  }
 }
